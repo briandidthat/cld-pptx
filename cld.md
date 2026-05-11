@@ -20,9 +20,9 @@
 
 ## 1. Who Is Anthropic?
 
-**Founded:** 2021 by 7 former OpenAI researchers and executives
-**CEO:** Dario Amodei — ex OpenAI VP of Research
-**President:** Daniela Amodei — ex OpenAI VP of Operations
+**Founded:** 2021 by 7 former OpenAI researchers and executives  
+**CEO:** Dario Amodei, ex OpenAI VP of Research  
+**President:** Daniela Amodei, ex OpenAI VP of Operations
 
 **Mission:** Build the world's safest and most capable AI. Safety is a first-class engineering constraint, not a post-hoc filter.
 
@@ -118,7 +118,7 @@ Anthropic uses pinned, dated model strings so production deployments don't break
 
 - Orchestrates teams of specialized **subagents in parallel** within a single session
 - Models track remaining token budget throughout a session to pace long tasks rather than silently degrading
-- **Automatic context compaction** — summarizes earlier context to extend sessions indefinitely (Infinite Chats)
+- **Automatic context compaction**: Summarizes earlier context to extend sessions indefinitely (Infinite Chats)
 
 ### Computer Use
 
