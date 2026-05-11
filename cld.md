@@ -12,9 +12,9 @@
 5. [Claude Code](#5-claude-code)
 6. [Claude Cowork](#6-claude-cowork)
 7. [Claude Design](#7-claude-design)
-8. [Plans, Access & Enterprise Controls](#9-plans-access--enterprise-controls)
-9. [SRE Use Cases — Incident Response & Observability](#10-sre-use-cases--incident-response--observability)
-10. [SRE Use Cases — Automation, Code Review & Documentation](#11-sre-use-cases--automation-code-review--documentation)
+8. [Plans, Access & Enterprise Controls](#8-plans-access--enterprise-controls)
+9. [SRE Use Cases — Incident Response & Observability](#9-sre-use-cases--incident-response--observability)
+10. [SRE Use Cases — Automation, Code Review & Documentation](#10-sre-use-cases--automation-code-review--documentation)
 
 ---
 
@@ -267,19 +267,19 @@ Summarize the last 8 hours of alerts, deployments, and Slack discussion into a s
 
 ### Observability
 
-**Query generation**
+**Query generation**  
 Generate PromQL, LogQL, or Splunk SPL from plain-English descriptions. No syntax lookup, no trial and error. Explain what existing queries do and suggest optimizations.
 
-**Alert noise analysis**
+**Alert noise analysis**  
 Summarize weeks of alert history to identify noise vs. signal patterns, flapping alerts, and correlated failure modes across services.
 
-**SLO drafting**
+**SLO drafting**  
 Draft SLO definitions from service behavior descriptions and error budget history. Generate the PromQL recording rules to track them.
 
-**Dashboard interpretation**
+**Dashboard interpretation**  
 Feed Claude a screenshot of a Datadog or Grafana dashboard and get a written summary of what it shows, anomalies detected, and recommended next steps.
 
-**Capacity planning**
+**Capacity planning**  
 Analyze historical metrics, project growth curves, and summarize into a report with recommended headroom thresholds.
 
 ### SRE MCP Integrations Available Today
@@ -295,30 +295,30 @@ Analyze historical metrics, project growth curves, and summarize into a report w
 **Terraform / Helm / Kubernetes YAML**
 Review for security misconfigurations, anti-patterns, and config drift across the full file set — not just the diff. Load the entire IaC repo in one context window.
 
-**Codebase comprehension**
+**Codebase comprehension**  
 Explain what an unfamiliar 5,000-line module does before you're paged on it at 2am. Map build system dependencies and understand how changes will propagate before touching shared libraries.
 
-**Automated CI/CD review**
+**Automated CI/CD review**  
 Claude Code runs inside GitHub Actions — reviews PRs, flags regressions, generates test cases, and suggests fixes without a human in the loop.
 
 ### Scripting & Automation
 
-**Operational script generation**
+**Operational script generation**  
 Generate Python, Bash, or Go scripts with edge case handling specified upfront. Claude writes the retry logic and error handling you'd otherwise skip under pressure.
 
-**Query & filter tools**
+**Query & filter tools**  
 Write and explain regex, `jq` filters, `awk` pipelines. Translate between query languages (PromQL ↔ LogQL ↔ Splunk SPL). Explain what existing queries do before you modify them.
 
-**Autonomous deploy agent**
+**Autonomous deploy agent**  
 Claude Code + MCP: query logs on failure, diagnose root cause, recommend a fix, and trigger a patch deployment — all within governed, auditable workflows.
 
 ### Knowledge & Documentation
 
-**Runbook generation**
+**Runbook generation**  
 Auto-generate runbooks from code or architecture diagrams. Keep them in sync as services evolve. No more stale docs that haven't been touched since the service was written.
 
-**ADR writing**
+**ADR writing**  
 Write Architecture Decision Records from Slack threads, Jira tickets, or design review notes in a consistent format across the team.
 
-**Unified knowledge query**
+**Unified knowledge query**  
 Ask Claude questions across your entire internal wiki, runbook library, and past incident reports simultaneously — one query instead of five browser tabs.
