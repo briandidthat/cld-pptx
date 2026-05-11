@@ -31,10 +31,10 @@
 
 Training is a two-phase process:
 
-1. **Supervised learning** — the model self-critiques and revises its own responses against a 23,000-word "constitution" of guiding principles
-2. **RLAIF** — reinforcement learning from AI feedback, using the same principles as a reward signal
+1. **Supervised learning**: The model self-critiques and revises its own responses against a 23,000-word "constitution" of guiding principles.
+2. **RLAIF**: Reinforcement learning from AI feedback, using the same principles as a reward signal.
 
-This produces more robustly aligned models than standard RLHF. Resistance to misuse is a training primitive — not a layer added on top after the fact.
+This produces more robustly aligned models than standard RLHF. Resistance to misuse is a training primitive, not a layer added on top after the fact.
 
 ### Cloud & Infrastructure Partners
 
@@ -43,11 +43,11 @@ This produces more robustly aligned models than standard RLHF. Resistance to mis
 | **Amazon Bedrock** | Up to $4B investment; global + regional endpoints |
 | **Google Vertex AI** | Up to 1M TPUs; global, multi-region, and regional endpoints |
 | **Microsoft Azure Foundry** | Only cloud offering both Claude and GPT frontier models |
-| **Snowflake** | $200M multi-year partnership |
+| **SpaceX** | Multi year contract offering Anthropic more compute |
 
 **Compute:** 220,000 Nvidia GPUs · 300MW energy capacity
 
-**Policy:** Sales are restricted to entities majority-owned by Chinese, Russian, Iranian, or North Korean entities. Claude products are ad-free — Anthropic has made a public commitment to keep it that way.
+**Policy:** Sales are restricted to entities majority-owned by Chinese, Russian, Iranian, or North Korean entities.
 
 ---
 
@@ -137,14 +137,14 @@ Anthropic uses pinned, dated model strings so production deployments don't break
 
 ## 5. Claude Code
 
-> A command-line AI agent that reads/writes files, executes shell commands, runs tests, and commits to Git natively in the terminal — no context-switching. GA May 2025. Built by Anthropic's own engineering team using Claude Code itself.
+> A command-line AI agent that reads/writes files, executes shell commands, runs tests, and commits to Git natively in the terminal. Released for research preview in Feb 2025, general release May 2025. 
 
 ### Key Features
 
-- **Subagents** — spawns specialized parallel sub-agents within a single session for concurrent multi-task orchestration
-- **MCP Integration** — connects to linters, test runners, CI/CD, Jira, GitHub, Docker, Kubernetes, Datadog, and thousands more via the MCP ecosystem
-- **Code Security** — reviews entire codebases to identify vulnerabilities (launched Feb 2026)
-- **CI/CD Native** — TypeScript and Python SDKs; runs inside GitHub Actions or any pipeline automation without a UI
+- **Subagents**: Spawns specialized parallel sub-agents within a single session for concurrent multi-task orchestration.
+- **MCP Integration**: Connects to linters, test runners, CI/CD, Jira, GitHub, Docker, Kubernetes, Datadog, and thousands more via the MCP ecosystem.
+- **Code Security**: Reviews entire codebases to identify vulnerabilities (launched Feb 2026).
+- **CI/CD Native**: TypeScript and Python SDKs; runs inside GitHub Actions or any pipeline automation without a UI.
 
 ### Quick Start
 
@@ -176,14 +176,14 @@ Available on **Pro, Max, Team, and Enterprise** plans.
 
 ## 6. Claude Cowork
 
-> GUI equivalent of Claude Code — same agentic architecture, built for knowledge workers without requiring terminal access. Research preview Jan 2026, enterprise GA Feb 2026. Mac, Windows & web. Built by Claude Code itself in two weeks.
+> GUI equivalent of Claude Code. Same agentic architecture, built for knowledge workers without requiring terminal access. Research preview Jan 2026, enterprise GA Feb 2026. Mac, Windows & web. Built by Claude Code itself in two weeks.
 
 ### Key Features
 
-- **File System Access** — reads, writes, and edits files in user-specified folders; completes full multi-step tasks end-to-end, not just answering questions
-- **Scheduled Tasks** — define a recurring task once (e.g. pull metrics every Friday, weekly Slack digest, scan email each morning) and Claude handles it going forward
-- **Browser Integration** — Claude for Chrome connector completes tasks across all open browser tabs without window switching
-- **Enterprise Controls** — role-based access via SCIM, group spend limits per team, OpenTelemetry observability, usage analytics dashboard
+- **File System Access**: Reads, writes, and edits files in user-specified folders; completes full multi-step tasks end-to-end, not just answering questions
+- **Scheduled Tasks**: Define a recurring task once (e.g. pull metrics every Friday, weekly Slack digest, scan email each morning) and Claude handles it going forward
+- **Browser Integration**: Claude for Chrome connector completes tasks across all open browser tabs without window switching
+- **Enterprise Controls**: role-based access via SCIM, group spend limits per team, OpenTelemetry observability, usage analytics dashboard
 
 ### Enterprise Connectors (Sample)
 
@@ -205,10 +205,10 @@ Google Drive · Gmail · DocuSign · FactSet · AWS Marketplace · Honeycomb · 
 
 ### Key Features
 
-- **Brand System Ingestion** — reads your codebase and Figma files to extract your design system and applies it automatically to every new project
-- **Iterative Refinement** — inline comments on specific elements, direct text editing, adjustment sliders for spacing/color/layout; changes applied across the full design
-- **Claude Code Handoff** — packages completed designs into a handoff bundle; one instruction to Claude Code generates production React/Next.js
-- **Export Anywhere** — PPTX, PDF, standalone HTML, internal org URL, or direct to Canva (strategic Canva partnership announced at launch)
+- **Brand System Ingestion**: Reads your codebase and Figma files to extract your design system and applies it automatically to every new project.
+- **Iterative Refinement**: Inline comments on specific elements, direct text editing, adjustment sliders for spacing/color/layout. Changes applied consistently across the full design.
+- **Claude Code Handoff**: Packages completed designs into a handoff bundle; one instruction to Claude Code generates production React/Next.js.
+- **Export Anywhere**: PPTX, PDF, standalone HTML, internal org URL, or direct to Canva (strategic Canva partnership announced at launch).
 
 ### What It Creates
 
@@ -228,43 +228,6 @@ Google Drive · Gmail · DocuSign · FactSet · AWS Marketplace · Honeycomb · 
 
 ---
 
-## 8. MCP & Deployment Infrastructure
-
-### Model Context Protocol (MCP)
-
-> Open standard for connecting AI to external systems — "the USB-C for AI." Released November 2024 under MIT license. Industry standard adopted by OpenAI, Google, and Microsoft. Governed by the Linux Foundation since December 2025. 6,800+ tools in the ecosystem.
-
-**Transport types:**
-
-| Transport | Use Case |
-|-----------|----------|
-| **HTTP** (recommended) | Remote/cloud MCP servers |
-| **Stdio** | Local processes — linters, git, local databases |
-| ~~SSE~~ | Deprecated |
-
-**Reliability & behavior:**
-- Auto-reconnect with exponential backoff — up to 5 attempts (1s → 2s → 4s → 8s → 16s)
-- MCP servers can push messages directly into live sessions — CI results, monitoring alerts, deployment events
-- Permission model — servers declare capabilities explicitly; hosts restrict access at the org level; no implicit trust between integrations
-- `MAX_MCP_OUTPUT_TOKENS` — default 25K tokens per tool response, configurable via env var
-
-### Deployment Options
-
-| Option | Notes |
-|--------|-------|
-| **Anthropic API** | Direct — `api.anthropic.com`; maximum flexibility |
-| **Amazon Bedrock** | Global + regional endpoints; data residency controls |
-| **Google Vertex AI** | Global, multi-region, and regional endpoint types |
-| **Azure Foundry** | Only cloud with both Claude and GPT frontier models |
-| **Snowflake** | $200M multi-year partnership |
-
-**API notes:**
-- Rate limits doubled across all paid plans
-- Batch API supports up to 300K output tokens per request via `output-300k-2026-03-24` beta header
-- 2× API rate limits vs prior plans
-
----
-
 ## 9. Plans, Access & Enterprise Controls
 
 | Plan | Key Features |
@@ -277,16 +240,10 @@ Google Drive · Gmail · DocuSign · FactSet · AWS Marketplace · Honeycomb · 
 
 ### Security
 
-- **Prompt injection resistance** — Sonnet 4.6 is a major improvement over its predecessor, particularly relevant for agentic workflows and computer use that touch untrusted external data sources
-- **No training on Team/Enterprise data** — contractual guarantee; data is not used to train models
-- **Constitutional AI** — resistance to misuse is a training primitive, not a post-hoc filter
-- **Regional routing** — Bedrock and Vertex AI guarantee geographic data routing for compliance requirements
-
-### API Integration Notes
-
-- If your org has an existing AWS enterprise agreement, accessing Claude via Bedrock requires no new vendor approval
-- Pinned model strings (e.g. `claude-sonnet-4-6`) mean production deployments don't break on model updates
-- MCP connectors configured in `claude.ai` carry over automatically to Claude Code and Cowork on the same account
+- **Prompt injection resistance**: Sonnet 4.6 is a major improvement over its predecessor, particularly relevant for agentic workflows and computer use that touch untrusted external data sources
+- **No training on Team/Enterprise data**: Contractual guarantee that data is not used to train models.
+- **Constitutional AI**: Resistance to misuse is a training primitive, not a post-hoc filter
+- **Regional routing**: Bedrock and Vertex AI guarantee geographic data routing for compliance requirements
 
 ---
 
@@ -366,9 +323,3 @@ Write Architecture Decision Records from Slack threads, Jira tickets, or design 
 
 **Unified knowledge query**
 Ask Claude questions across your entire internal wiki, runbook library, and past incident reports simultaneously — one query instead of five browser tabs.
-
----
-
-> **Recommended starting point:** Evaluate Claude Code for one sprint on a non-critical service → connect PagerDuty or Datadog via MCP → if your org is AWS-heavy, start via Bedrock with no new vendor approval required.
->
-> Claude Code is available on **Pro, Max, Team, and Enterprise** plans.
