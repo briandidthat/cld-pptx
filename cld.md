@@ -12,10 +12,9 @@
 5. [Claude Code](#5-claude-code)
 6. [Claude Cowork](#6-claude-cowork)
 7. [Claude Design](#7-claude-design)
-8. [MCP & Deployment Infrastructure](#8-mcp--deployment-infrastructure)
-9. [Plans, Access & Enterprise Controls](#9-plans-access--enterprise-controls)
-10. [SRE Use Cases — Incident Response & Observability](#10-sre-use-cases--incident-response--observability)
-11. [SRE Use Cases — Automation, Code Review & Documentation](#11-sre-use-cases--automation-code-review--documentation)
+8. [Plans, Access & Enterprise Controls](#9-plans-access--enterprise-controls)
+9. [SRE Use Cases — Incident Response & Observability](#10-sre-use-cases--incident-response--observability)
+10. [SRE Use Cases — Automation, Code Review & Documentation](#11-sre-use-cases--automation-code-review--documentation)
 
 ---
 
@@ -228,7 +227,7 @@ Google Drive · Gmail · DocuSign · FactSet · AWS Marketplace · Honeycomb · 
 
 ---
 
-## 9. Plans, Access & Enterprise Controls
+## 8. Plans, Access & Enterprise Controls
 
 | Plan | Key Features |
 |------|-------------|
@@ -247,7 +246,7 @@ Google Drive · Gmail · DocuSign · FactSet · AWS Marketplace · Honeycomb · 
 
 ---
 
-## 10. SRE Use Cases — Incident Response & Observability
+## 9. SRE Use Cases — Incident Response & Observability
 
 ### Incident Response
 
@@ -289,7 +288,7 @@ Analyze historical metrics, project growth curves, and summarize into a report w
 
 ---
 
-## 11. SRE Use Cases — Automation, Code Review & Documentation
+## 10. SRE Use Cases — Automation, Code Review & Documentation
 
 ### Infrastructure & Code Review
 
